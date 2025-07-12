@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
 } from '@/components/ui/card';
-import { Calendar, User } from 'lucide-react';
 import type { Post } from '@/types/post';
+import { Calendar, User } from 'lucide-react';
 
 interface PostCardProps {
   post: Post;
@@ -19,6 +19,7 @@ export const PostCard = ({ post }: PostCardProps) => {
       <div className='h-40 relative overflow-hidden'>
         <img
           src={post.thumbnailURL}
+          loading='lazy'
           alt={post.title}
           className='object-cover h-full w-full hover:scale-105 transition-transform duration-300'
         />
