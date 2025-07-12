@@ -1,15 +1,6 @@
-import { Button } from '@/components/ui/button';
+import PostPage from './modules/post';
 function App() {
-  return (
-    <>
-      <h1 className='text-3xl font-bold underline text-center text-blue-500'>
-        Hello world
-      </h1>
-      <div className='flex justify-center'>
-        <Button>Shadcn UI</Button>
-      </div>
-    </>
-  );
+  return <PostPage />;
 }
 
 export default App;

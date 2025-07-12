@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": "799dffe9-4421-47d6-81e4-83e277a8dce2",
+      "title": "Getting Started with Next.js 15",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Development"],
+      "content": "Learn about the latest features and improvements in Next.js 15, including enhanced performance and new developer tools.",
+      "author": {
+        "name": "Sarah Johnson"
+      },
+      "createdAt": "January 15, 2024",
+      "readTime": "5 min read",
+      "lastReadAt": "January 18, 2024"
+    },
+    {
+      "id": "799dffe9-4421-47d6-81e4-13e277a8dce2",
+      "title": "The Future of Web Development",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Technology"],
+      "content": "Exploring emerging trends and technologies that will shape the future of web development in the coming years.",
+      "author": {
+        "name": "Mike Chen"
+      },
+      "createdAt": "January 12, 2024",
+      "readTime": "8 min read",
+      "lastReadAt": "January 14, 2024"
+    },
+    {
+      "id": "791dffe9-4421-47d6-81e4-83e277a8dce2",
+      "title": "Building Responsive Layouts with CSS Grid",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Design"],
+      "content": "Master CSS Grid to create flexible and responsive layouts that work perfectly across all device sizes.",
+      "author": {
+        "name": "Emily Rodriguez"
+      },
+      "createdAt": "January 10, 2024",
+      "readTime": "6 min read",
+      "lastReadAt": "January 11, 2024"
+    },
+    {
+      "id": "119dffe9-4421-47d6-81e4-83e277a8dce2",
+      "title": "JavaScript Performance Optimization Tips",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Development"],
+      "content": "Discover practical techniques to optimize your JavaScript code for better performance and user experience.",
+      "author": {
+        "name": "David Kim"
+      },
+      "createdAt": "January 8, 2024",
+      "readTime": "7 min read",
+      "lastReadAt": "January 9, 2024"
+    },
+    {
+      "id": "799dffe9-4321-47d6-81e4-83e277a8dce2",
+      "title": "UX Design Principles for Developers",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Design"],
+      "content": "Essential UX design principles that every developer should know to create better user experiences.",
+      "author": {
+        "name": "Lisa Wang"
+      },
+      "createdAt": "January 5, 2024",
+      "readTime": "4 min read",
+      "lastReadAt": "January 6, 2024"
+    },
+    {
+      "id": "799ddae9-4421-47d6-81e4-83e277a8dce2",
+      "title": "Introduction to TypeScript",
+      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "categories": ["Development"],
+      "content": "A comprehensive guide to getting started with TypeScript and how it can improve your JavaScript development.",
+      "author": {
+        "name": "Alex Thompson"
+      },
+      "createdAt": "January 3, 2024",
+      "readTime": "9 min read",
+      "lastReadAt": "January 4, 2024"
+    }
+  ],
+  "total": 16
+}
