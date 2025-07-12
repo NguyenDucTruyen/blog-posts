@@ -2,7 +2,9 @@ import type { Post, PostFilter, PostResponse } from '@/types/post';
 import POST_DATA from '../data/post.json';
 
 export const getAllPosts = async (query: PostFilter): Promise<PostResponse> => {
-  let filteredPosts = POST_DATA.data;
+  return await new Promise<PostResponse>(resolve => {
+    setTimeout(() => {
+      let filteredPosts = POST_DATA.data;
       // Filter and sort posts based on the query parameters
       if (query.text) {
         filteredPosts = filteredPosts.filter(
@@ -47,10 +49,12 @@ export const getAllPosts = async (query: PostFilter): Promise<PostResponse> => {
           return 0;
         });
       }
-      return {
+      resolve({
         data: filteredPosts,
         total: POST_DATA.total,
-      }
+      });
+    }, 500);
+  });
 };
 
 export const getPostById = async (id: string): Promise<Post | null> => {
@@ -58,6 +62,6 @@ export const getPostById = async (id: string): Promise<Post | null> => {
     setTimeout(() => {
       const post = POST_DATA.data.find(p => p.id === id) || null;
       resolve(post);
-    }, 0);
+    }, 500);
   });
 };

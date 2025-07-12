@@ -3,7 +3,7 @@
     {
       "id": "799dffe9-4421-47d6-81e4-83e277a8dce2",
       "title": "Getting Started with Next.js 15",
-      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "thumbnailURL": "https://res.cloudinary.com/dzdfgj03g/image/upload/v1744650789/Slooh-theme/bg-image-4_ipaeg8.jpg",
       "categories": ["Development"],
       "content": "Learn about the latest features and improvements in Next.js 15, including enhanced performance and new developer tools.",
       "author": {
@@ -29,7 +29,7 @@
     {
       "id": "791dffe9-4421-47d6-81e4-83e277a8dce2",
       "title": "Building Responsive Layouts with CSS Grid",
-      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "thumbnailURL": "https://res.cloudinary.com/dzdfgj03g/image/upload/v1744650788/Slooh-theme/theme-summer_iylowb.webp",
       "categories": ["Design"],
       "content": "Master CSS Grid to create flexible and responsive layouts that work perfectly across all device sizes.",
       "author": {
@@ -55,7 +55,7 @@
     {
       "id": "799dffe9-4321-47d6-81e4-83e277a8dce2",
       "title": "UX Design Principles for Developers",
-      "thumbnailURL": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F15t6fr44mdl8vd73pdpm.png",
+      "thumbnailURL": "https://res.cloudinary.com/dzdfgj03g/image/upload/v1744650786/Slooh-theme/theme-autumn_mot9cw.webp",
       "categories": ["Design"],
       "content": "Essential UX design principles that every developer should know to create better user experiences.",
       "author": {

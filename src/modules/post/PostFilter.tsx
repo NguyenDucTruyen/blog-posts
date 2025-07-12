@@ -16,46 +16,31 @@ import type { PostFilter } from '@/types/post';
 import { Search, X } from 'lucide-react';
 interface IPostFilterProps {
   filters: PostFilter;
-  setFilters: (filters: PostFilter) => void;
+  setFilters: (filters: PostFilter | ((prev: PostFilter) => PostFilter)) => void;
 }
 
 export default function PostFilter({ filters, setFilters }: IPostFilterProps) {
-  const handleFilterOrderChange = (value: string) => {
+    const handleFilterOrderChange = (value: (typeof SORT_TYPES)[keyof typeof SORT_TYPES]) => {
+  setFilters((prev: PostFilter) => {
+    const baseUpdate = {
+      ...prev,
+      sortOption: value,
+    };
+
     switch (value) {
       case SORT_TYPES.NEWEST:
-        setFilters({
-          ...filters,
-          sortOption: value,
-          sortBy: 'createdAt',
-          sortOrder: 'desc',
-        });
-        break;
+        return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'desc' };
       case SORT_TYPES.OLDEST:
-        setFilters({
-          ...filters,
-          sortOption: value,
-          sortBy: 'createdAt',
-          sortOrder: 'asc',
-        });
-        break;
+        return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'asc' };
       case SORT_TYPES.AZ:
-        setFilters({
-          ...filters,
-          sortOption: value,
-          sortBy: 'title',
-          sortOrder: 'asc',
-        });
-        break;
+        return { ...baseUpdate, sortBy: 'title', sortOrder: 'asc' };
       case SORT_TYPES.ZA:
-        setFilters({
-          ...filters,
-          sortOption: value,
-          sortBy: 'title',
-          sortOrder: 'desc',
-        });
-        break;
+        return { ...baseUpdate, sortBy: 'title', sortOrder: 'desc' };
+      default:
+        return prev;
     }
-  };
+  });
+};
 
   return (
     <div className='flex justify-between lg:flex-row gap-4 mb-8 p-4 bg-muted/50 rounded-lg'>
@@ -114,14 +99,14 @@ export const PostFilterInput = ({ onChange, value }: IPostFilterInputProps) => {
   );
 };
 
-export const PostFilterSelect = ({
+export const PostFilterSelect = <T extends string>({
   value,
   options,
   onChange,
 }: {
-  value: string;
-  options: { label: string; value: string }[];
-  onChange: (value: string) => void;
+  value: T;
+  options: { label: string; value: T }[];
+  onChange: (value: T) => void;
 }) => {
   return (
     <Select onValueChange={onChange} value={value}>

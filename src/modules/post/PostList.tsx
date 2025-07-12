@@ -10,17 +10,31 @@ interface IPostProps {
   posts: Post[];
   error?: string | null;
   total: number;
+  isLoading: boolean;
   setFilters: (filters: PostFilter) => void;
 }
 
-export default function Post({ posts, error, total, setFilters }: IPostProps) {
+export default function Post({
+  posts,
+  error,
+  total,
+  isLoading,
+  setFilters,
+}: IPostProps) {
   const lengthPost = useMemo(() => posts.length, [posts]);
+
   if (error) {
     return <div className='text-center text-red-500'>Error: {error}</div>;
   }
+
+  if (isLoading) {
+    return <LoadingPosts />;
+  }
+
   if (posts.length === 0) {
     return <EmptyPost clearFilters={() => setFilters(DEFAULT_FILTERS)} />;
   }
+
   return (
     <>
       <PostMeta length={lengthPost} total={total} />
@@ -55,6 +69,16 @@ export const EmptyPost = ({ clearFilters }: { clearFilters: () => void }) => {
       <Button className='mt-4 cursor-pointer' onClick={clearFilters}>
         Clear Filters
       </Button>
+    </div>
+  );
+};
+
+export const LoadingPosts = () => {
+  return (
+    <div className='flex justify-center items-center flex-col text-muted-foreground mb-4'>
+      <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4'></div>
+      <h3 className='text-lg font-semibold mb-2'>Loading posts...</h3>
+      <p>Please wait while we fetch the latest posts</p>
     </div>
   );
 };

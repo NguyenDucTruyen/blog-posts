@@ -1,4 +1,5 @@
 // components/PostCard.tsx
+import LazyImage from '@/components/common/LazyImage';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -17,11 +18,9 @@ export const PostCard = ({ post }: PostCardProps) => {
   return (
     <Card className='shadow-sm overflow-hidden hover:shadow-lg transition-shadow'>
       <div className='h-40 relative overflow-hidden'>
-        <img
+        <LazyImage
           src={post.thumbnailURL}
-          loading='lazy'
-          alt={post.title}
-          className='object-cover h-full w-full hover:scale-105 transition-transform duration-300'
+          className='object-cover h-40 w-full hover:scale-105 transition-transform duration-300'
         />
       </div>
 

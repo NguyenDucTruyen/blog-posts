@@ -4,7 +4,7 @@ import { PostHeader } from './PostHeader';
 import PostList from './PostList';
 
 export default function Post() {
-  const { posts, error, filters, setFilters, total } = usePost();
+  const { posts, error, filters, setFilters, total, isLoading } = usePost();
   return (
     <div className='w-full max-w-[1200px] mx-auto py-10'>
       <PostHeader />
@@ -13,6 +13,7 @@ export default function Post() {
         posts={posts}
         error={error}
         total={total}
+        isLoading={isLoading}
         setFilters={setFilters}
       />
     </div>

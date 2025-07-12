@@ -24,5 +24,5 @@ export interface PostFilter {
   author: string;
   sortBy: 'createdAt' | 'title';
   sortOrder: 'asc' | 'desc';
-  sortOption: typeof SORT_TYPES[keyof typeof SORT_TYPES];
+  sortOption: (typeof SORT_TYPES)[keyof typeof SORT_TYPES];
 }
