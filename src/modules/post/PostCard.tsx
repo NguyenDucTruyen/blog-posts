@@ -33,12 +33,12 @@ export const PostCard = ({ post }: PostCardProps) => {
           ))}
           <span className='text-xs text-muted-foreground'>6 min read</span>
         </div>
-        <h3 className='font-semibold text-lg leading-tight hover:text-primary transition-colors text-center'>
+        <h3 className='font-semibold text-lg leading-tight hover:text-primary transition-colors text-center h-[45px] line-clamp-2'>
           {post.title}
         </h3>
       </CardHeader>
 
-      <CardContent className='text-sm text-gray-500 text-center'>
+      <CardContent className='text-sm text-gray-500 text-center h-[60px]'>
         {post.content}
       </CardContent>
 
