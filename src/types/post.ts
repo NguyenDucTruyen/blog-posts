@@ -18,7 +18,7 @@ export interface PostResponse {
   total: number;
 }
 
-export interface PostFilter {
+export interface IPostFilter {
   text: string;
   category: string;
   author: string;

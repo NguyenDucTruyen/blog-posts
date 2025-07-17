@@ -1,7 +1,9 @@
-import type { Post, PostFilter, PostResponse } from '@/types/post';
+import type { IPostFilter, Post, PostResponse } from '@/types/post';
 import POST_DATA from '../data/post.json';
 
-export const getAllPosts = async (query: PostFilter): Promise<PostResponse> => {
+export const getAllPosts = async (
+  query: IPostFilter
+): Promise<PostResponse> => {
   return await new Promise<PostResponse>(resolve => {
     setTimeout(() => {
       let filteredPosts = POST_DATA.data;

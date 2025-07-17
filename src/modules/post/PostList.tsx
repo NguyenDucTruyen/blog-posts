@@ -1,7 +1,7 @@
 // components/Post.tsx
 import { Button } from '@/components/ui/button';
 import { DEFAULT_FILTERS } from '@/constants/post';
-import type { Post, PostFilter } from '@/types/post';
+import type { IPostFilter, Post } from '@/types/post';
 import { Search } from 'lucide-react';
 import { useMemo } from 'react';
 import { PostCard } from './PostCard';
@@ -11,7 +11,7 @@ interface IPostProps {
   error?: string | null;
   total: number;
   isLoading: boolean;
-  setFilters: (filters: PostFilter) => void;
+  setFilters: (filters: IPostFilter) => void;
 }
 
 export default function Post({

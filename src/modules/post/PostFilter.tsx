@@ -12,35 +12,39 @@ import {
   SORT_OPTIONS,
   SORT_TYPES,
 } from '@/constants/post';
-import type { PostFilter } from '@/types/post';
+import type { IPostFilter } from '@/types/post';
 import { Search, X } from 'lucide-react';
 interface IPostFilterProps {
-  filters: PostFilter;
-  setFilters: (filters: PostFilter | ((prev: PostFilter) => PostFilter)) => void;
+  filters: IPostFilter;
+  setFilters: (
+    filters: IPostFilter | ((prev: IPostFilter) => IPostFilter)
+  ) => void;
 }
 
 export default function PostFilter({ filters, setFilters }: IPostFilterProps) {
-    const handleFilterOrderChange = (value: (typeof SORT_TYPES)[keyof typeof SORT_TYPES]) => {
-  setFilters((prev: PostFilter) => {
-    const baseUpdate = {
-      ...prev,
-      sortOption: value,
-    };
+  const handleFilterOrderChange = (
+    value: (typeof SORT_TYPES)[keyof typeof SORT_TYPES]
+  ) => {
+    setFilters((prev: IPostFilter) => {
+      const baseUpdate = {
+        ...prev,
+        sortOption: value,
+      };
 
-    switch (value) {
-      case SORT_TYPES.NEWEST:
-        return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'desc' };
-      case SORT_TYPES.OLDEST:
-        return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'asc' };
-      case SORT_TYPES.AZ:
-        return { ...baseUpdate, sortBy: 'title', sortOrder: 'asc' };
-      case SORT_TYPES.ZA:
-        return { ...baseUpdate, sortBy: 'title', sortOrder: 'desc' };
-      default:
-        return prev;
-    }
-  });
-};
+      switch (value) {
+        case SORT_TYPES.NEWEST:
+          return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'desc' };
+        case SORT_TYPES.OLDEST:
+          return { ...baseUpdate, sortBy: 'createdAt', sortOrder: 'asc' };
+        case SORT_TYPES.AZ:
+          return { ...baseUpdate, sortBy: 'title', sortOrder: 'asc' };
+        case SORT_TYPES.ZA:
+          return { ...baseUpdate, sortBy: 'title', sortOrder: 'desc' };
+        default:
+          return prev;
+      }
+    });
+  };
 
   return (
     <div className='flex justify-between lg:flex-row gap-4 mb-8 p-4 bg-muted/50 rounded-lg'>

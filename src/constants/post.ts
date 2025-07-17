@@ -1,5 +1,5 @@
 import POST_DATA from '@/data/post.json';
-import type { PostFilter } from '@/types/post';
+import type { IPostFilter } from '@/types/post';
 
 export const CATEGORY_OPTIONS = [
   { label: 'All Categories', value: 'all' },
@@ -21,7 +21,7 @@ export const SORT_OPTIONS = [
   { label: 'Title A-Z', value: SORT_TYPES.AZ },
   { label: 'Title Z-A', value: SORT_TYPES.ZA },
 ];
-export const DEFAULT_FILTERS: PostFilter = {
+export const DEFAULT_FILTERS: IPostFilter = {
   text: '',
   category: 'all',
   author: 'all',
