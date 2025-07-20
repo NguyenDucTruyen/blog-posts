@@ -1,11 +1,14 @@
 import POST_DATA from '@/data/post.json';
 import type { IPostFilter } from '@/types/post';
 
-export const CATEGORY_OPTIONS = [
-  { label: 'All Categories', value: 'all' },
+export const LIST_CATEGORIES = [
   { label: 'Technology', value: 'Technology' },
   { label: 'Development', value: 'Development' },
   { label: 'Design', value: 'Design' },
+];
+export const CATEGORY_OPTIONS = [
+  { label: 'All Categories', value: 'all' },
+  ...LIST_CATEGORIES,
 ];
 
 export const SORT_TYPES = {
@@ -29,9 +32,10 @@ export const DEFAULT_FILTERS: IPostFilter = {
   sortOrder: 'desc',
   sortOption: SORT_TYPES.NEWEST,
 };
-export const AUTHOR_OPTIONS = POST_DATA.data.reduce(
+
+export const LIST_AUTHORS = POST_DATA.data.reduce(
   (acc, cur) => {
-    if (!acc.find(author => author.value === cur.author.name)) {
+    if (!acc.find(author => author?.value === cur.author.name)) {
       acc.push({
         label: cur.author.name,
         value: cur.author.name,
@@ -39,10 +43,10 @@ export const AUTHOR_OPTIONS = POST_DATA.data.reduce(
     }
     return acc;
   },
-  [
-    {
-      label: 'All Authors',
-      value: 'all',
-    },
-  ]
+  [] as { label: string; value: string }[]
 );
+
+export const AUTHOR_OPTIONS = [
+  { label: 'All Authors', value: 'all' },
+  ...LIST_AUTHORS,
+];

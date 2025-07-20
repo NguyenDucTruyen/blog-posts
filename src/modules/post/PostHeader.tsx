@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { AddPost } from './add-post';
 
 export const PostHeader = () => {
   return (
@@ -10,7 +10,7 @@ export const PostHeader = () => {
         </p>
       </div>
       <div className='flex items-center space-x-4'>
-        <Button>Add new post</Button>
+        <AddPost />
       </div>
     </header>
   );
