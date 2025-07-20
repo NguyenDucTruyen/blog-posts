@@ -88,7 +88,7 @@ export const PostFilterInput = ({ onChange, value }: IPostFilterInputProps) => {
         onChange={e => onChange(e.target.value)}
         className='w-full max-w-sm px-10'
       />
-      <span className='absolute start-0 inset-y-0 flex items-center justify-center px-2'>
+       <span className='absolute start-0 inset-y-0 flex items-center justify-center px-2'>
         <Search className='size-4 text-muted-foreground' />
       </span>
       {value && (
