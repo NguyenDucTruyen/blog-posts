@@ -1,4 +1,4 @@
-import { AddPost } from './add-post';
+import { CreatePostModal } from '@/modules/post/component/create-post/post-create';
 
 export const PostHeader = () => {
   return (
@@ -10,9 +10,8 @@ export const PostHeader = () => {
         </p>
       </div>
       <div className='flex items-center space-x-4'>
-        <AddPost />
+        <CreatePostModal />
       </div>
     </header>
   );
 };
-export default PostHeader;

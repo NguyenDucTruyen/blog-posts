@@ -1,4 +1,4 @@
-import PostPage from './modules/post';
+import { PostPage } from './pages/post';
 function App() {
   return <PostPage />;
 }

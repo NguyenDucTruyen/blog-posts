@@ -1,5 +1,5 @@
 // components/PostCard.tsx
-import LazyImage from '@/components/common/LazyImage';
+import { LazyImage } from '@/components/common/lazy-image.tsx';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
 } from '@/components/ui/card';
-import type { Post } from '@/types/post';
+import type { Post } from '@/modules/post/shared/api/post.service';
 import { Calendar, User } from 'lucide-react';
 
 interface PostCardProps {
@@ -33,12 +33,12 @@ export const PostCard = ({ post }: PostCardProps) => {
           ))}
           <span className='text-xs text-muted-foreground'>6 min read</span>
         </div>
-        <h3 className='font-semibold text-lg leading-tight hover:text-primary transition-colors text-center h-[45px] line-clamp-2'>
+        <h3 className='font-semibold text-lg leading-tight hover:text-primary transition-colors text-center'>
           {post.title}
         </h3>
       </CardHeader>
 
-      <CardContent className='text-sm text-gray-500 text-center h-[60px]'>
+      <CardContent className='text-sm text-gray-500 text-center'>
         {post.content}
       </CardContent>
 
