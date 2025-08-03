@@ -1,6 +1,3 @@
-import { PostFilter } from '@/modules/post/post-filter/post-filter';
-import { PostHeader } from '@/modules/post/post-header/post-header';
-import { PostList } from '@/modules/post/post-list/post-list';
 import {
   DEFAULT_FILTERS,
   getAllPosts,
@@ -8,7 +5,9 @@ import {
   type PostFilterOptions,
 } from '@/modules/post/shared/api/post.service';
 import { useEffect, useState } from 'react';
+import { PostPageView } from './post-list-page-view';
 
+// Container Component - Handles all data fetching, state management, and business logic
 export function PostPage() {
   const [error, setError] = useState<string | null>(null);
   const [postResponse, setPostResponse] = useState<{
@@ -17,7 +16,11 @@ export function PostPage() {
   } | null>(null);
   const [filters, setFilters] = useState<PostFilterOptions>(DEFAULT_FILTERS);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // Derived state
   const { data: posts = [], total = 0 } = postResponse || {};
+
+  // Business logic for fetching posts
   const fetchPosts = async (filterData: PostFilterOptions) => {
     try {
       setIsLoading(true);
@@ -32,6 +35,7 @@ export function PostPage() {
     }
   };
 
+  // Effect for handling filter changes with debouncing
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       fetchPosts(filters);
@@ -41,17 +45,16 @@ export function PostPage() {
       clearTimeout(timeoutId);
     };
   }, [filters]);
+
+  // Render the presentational component with all necessary props
   return (
-    <div className='w-full max-w-[1200px] mx-auto py-10'>
-      <PostHeader />
-      <PostFilter filters={filters} setFilters={setFilters} />
-      <PostList
-        posts={posts}
-        error={error}
-        total={total}
-        isLoading={isLoading}
-        setFilters={setFilters}
-      />
-    </div>
+    <PostPageView
+      posts={posts}
+      total={total}
+      error={error}
+      isLoading={isLoading}
+      filters={filters}
+      setFilters={setFilters}
+    />
   );
 }

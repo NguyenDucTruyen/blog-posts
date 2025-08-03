@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import { CustomButtonDemo } from './modules/demos/button-demo-page';
 import { NotFoundPage } from './modules/error/not-found-page';
 import { DetailPostPage } from './modules/post/post-detail/post-detail-page';
 import { PostPage } from './modules/post/post-list/post-list-page';
-
 const routes = [
   {
     path: '/',
@@ -11,6 +11,10 @@ const routes = [
   {
     path: '/post/:id',
     component: DetailPostPage,
+  },
+  {
+    path: '/demo/button',
+    component: CustomButtonDemo,
   },
 ];
 
