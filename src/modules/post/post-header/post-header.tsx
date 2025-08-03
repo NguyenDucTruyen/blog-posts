@@ -1,4 +1,4 @@
-import { CreatePostModal } from '@/modules/post/component/create-post/post-create';
+import { CreatePostModal } from '@/modules/post/create-post/post-create';
 
 export const PostHeader = () => {
   return (

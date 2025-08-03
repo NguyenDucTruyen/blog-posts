@@ -1,6 +1,6 @@
-import { PostFilter } from '@/modules/post/component/post-filter/post-filter';
-import { PostHeader } from '@/modules/post/component/post-header/post-header';
-import { PostList } from '@/modules/post/component/post-list/post-list';
+import { PostFilter } from '@/modules/post/post-filter/post-filter';
+import { PostHeader } from '@/modules/post/post-header/post-header';
+import { PostList } from '@/modules/post/post-list/post-list';
 import {
   DEFAULT_FILTERS,
   getAllPosts,
